@@ -1,0 +1,17 @@
+.section {
+  padding-block: 88px 0;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font: 500 12px var(--font-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cobalt);
+}
+
+.title {
+  margin: 0 0 36px;
+  font: 700 clamp(30px, 4.5vw, 48px) / 1.05 var(--font-display);
+  letter-spacing: -0.02em;
+}

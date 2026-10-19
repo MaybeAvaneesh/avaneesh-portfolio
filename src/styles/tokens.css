@@ -1,0 +1,27 @@
+/* Design tokens. A single, deliberately dark look. */
+:root {
+  --ink: #0c0e1c;
+  --ink-2: #141830;
+  --line: #262b4a;
+  --fg: #e9ebf7;
+  --fg-soft: #c9cde4;
+  --muted: #9097b8;
+  --cobalt: #6c8cff;
+  --amber: #ffc24d;
+  --ok: #4ade80;
+  --ok-fg: #7ef0a8;
+  --bad: #f87171;
+  --bad-fg: #fca5a5;
+
+  --font-display: "Syne", "Avenir Next", "Segoe UI", sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --max-width: 1080px;
+  --gutter: 16px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+
+  color-scheme: dark;
+}

@@ -1,0 +1,69 @@
+.contact {
+  padding-block: 100px 60px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font: 500 12px var(--font-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cobalt);
+}
+
+.title {
+  margin: 0 0 24px;
+  font: 700 clamp(40px, 8vw, 88px) / 0.95 var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.title span {
+  color: var(--cobalt);
+}
+
+.intro {
+  max-width: 60ch;
+  margin: 0;
+  color: var(--muted);
+}
+
+.mail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.address {
+  font: 500 clamp(16px, 2.6vw, 22px) var(--font-mono);
+  color: var(--amber);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.address:hover {
+  text-decoration: underline;
+}
+
+.copy {
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--fg);
+  font: 500 13px var(--font-mono);
+  cursor: pointer;
+}
+
+.copy:hover {
+  border-color: var(--cobalt);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}

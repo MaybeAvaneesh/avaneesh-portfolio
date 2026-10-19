@@ -1,0 +1,34 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.box {
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.meta {
+  margin: 0;
+  font: 400 13px var(--font-mono);
+  color: var(--muted);
+}
+
+.org {
+  margin: 6px 0 4px;
+  font: 700 22px/1.2 var(--font-display);
+}
+
+.summary {
+  margin: 14px 0 0;
+  color: var(--fg-soft);
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

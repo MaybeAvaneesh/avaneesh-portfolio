@@ -1,0 +1,80 @@
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.job {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  padding-block: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.job:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.when {
+  margin: 0;
+  font: 400 13px/1.6 var(--font-mono);
+  color: var(--muted);
+}
+
+.when strong {
+  display: block;
+  margin-bottom: 2px;
+  font: 600 15px var(--font-body);
+  color: var(--fg);
+}
+
+.body {
+  min-width: 0;
+}
+
+.company {
+  margin: 0;
+  font: 700 24px/1.2 var(--font-display);
+}
+
+.company small {
+  margin-left: 8px;
+  font: 500 15px var(--font-body);
+  color: var(--muted);
+}
+
+.highlights {
+  display: grid;
+  gap: 12px;
+  max-width: 68ch;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.highlights li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--fg-soft);
+}
+
+.highlights li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  font-family: var(--font-mono);
+  color: var(--cobalt);
+}
+
+.num {
+  font-weight: 600;
+  color: var(--amber);
+}
+
+@media (max-width: 700px) {
+  .job {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
