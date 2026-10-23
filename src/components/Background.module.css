@@ -4,26 +4,36 @@
   gap: 16px;
 }
 
-.box {
+.grid > * {
   min-width: 0;
-  padding: 28px;
-  border: 1px solid var(--line);
+}
+
+.box {
+  height: 100%;
+  padding: 32px;
   border-radius: var(--radius-md);
 }
 
 .meta {
   margin: 0;
-  font: 400 13px var(--font-mono);
+  font: 400 12px var(--font-mono);
   color: var(--muted);
 }
 
 .org {
-  margin: 6px 0 4px;
-  font: 700 22px/1.2 var(--font-display);
+  margin: 20px 0 4px;
+  font: 400 28px/1.1 var(--font-sans);
+  letter-spacing: -0.04em;
+}
+
+.role {
+  margin: 0;
+  color: var(--accent);
+  font-size: 14px;
 }
 
 .summary {
-  margin: 14px 0 0;
+  margin: 18px 0 0;
   color: var(--fg-soft);
 }
 

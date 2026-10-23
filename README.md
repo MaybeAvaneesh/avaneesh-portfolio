@@ -2,7 +2,7 @@
 
 Personal portfolio of Avaneesh Gujran, full-stack software engineer.
 
-Built with **React 19**, **TypeScript** (strict) and **Vite**. Deployed to **GitHub Pages** by GitHub Actions on every push to `main`.
+Built with **React 19**, **TypeScript** (strict) and **Vite**, animated with **GSAP** (ScrollTrigger, SplitText), **Motion** and **Lenis**. Deployed to **GitHub Pages** by GitHub Actions on every push to `main`.
 
 ## Quick start
 
@@ -54,7 +54,22 @@ add a `public/CNAME` file containing the domain.
 
 Pull requests and other branches run the same checks in `ci.yml` without deploying.
 
+## Motion
+
+| Library              | Used for                                                     | Where                                     |
+| -------------------- | ------------------------------------------------------------ | ----------------------------------------- |
+| GSAP + SplitText     | Hero name reveal, contact heading word-by-word scrub         | `Hero.tsx`, `Contact.tsx`                 |
+| GSAP + ScrollTrigger | Stat count-up, timeline rail that fills as you scroll        | `ImpactStrip.tsx`, `Experience.tsx`       |
+| Motion               | Scroll reveals, magnetic buttons, nav pill, diagram staggers | `src/motion/*`, `Nav.tsx`, `Projects.tsx` |
+| Lenis                | Smooth scrolling, driven by GSAP's ticker                    | `src/motion/SmoothScroll.tsx`             |
+
+Pointer spotlight and hero light use CSS variables written directly, so moving the mouse never re-renders React.
+Motion's engine is lazy-loaded (`LazyMotion`), and vendor code is split into `react` and `animation` chunks.
+
+Everything respects **prefers-reduced-motion**: Lenis and GSAP scenes are skipped and content renders in place.
+Tests run with reduced motion, so they assert the final, static page.
+
 ## Notes
 
-- Fonts (Syne, IBM Plex Sans, JetBrains Mono) are self-hosted via `@fontsource`: no third-party requests.
+- Fonts (Geist, Geist Mono) are self-hosted via `@fontsource-variable`: no third-party requests.
 - Respects `prefers-reduced-motion`, has a skip link, semantic landmarks and visible focus states.

@@ -1,0 +1,43 @@
+.spotlight {
+  --mx: 50%;
+  --my: 0%;
+  position: relative;
+  isolation: isolate;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(600px circle at var(--mx) var(--my), rgb(140 155 255 / 0.07), transparent 40%),
+    var(--surface);
+  transition: border-color 0.3s var(--ease-out);
+}
+
+/* Border glow: a masked gradient ring that only shows near the pointer. */
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    300px circle at var(--mx) var(--my),
+    rgb(140 155 255 / 0.55),
+    transparent 60%
+  );
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-out);
+  pointer-events: none;
+}
+
+.spotlight:hover::before {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .spotlight::before {
+    display: none;
+  }
+}
