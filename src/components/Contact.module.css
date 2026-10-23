@@ -1,68 +1,97 @@
 .contact {
-  padding-block: 100px 60px;
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  margin-top: clamp(96px, 14vw, 160px);
+  padding-block: clamp(96px, 12vw, 140px);
+  border-top: 1px solid var(--line);
+}
+
+.glow {
+  position: absolute;
+  left: 50%;
+  bottom: -420px;
+  z-index: -1;
+  width: 1100px;
+  height: 700px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(140 155 255 / 0.18), transparent);
+  filter: blur(10px);
 }
 
 .eyebrow {
-  margin: 0 0 12px;
-  font: 500 12px var(--font-mono);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--cobalt);
-}
-
-.title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   margin: 0 0 24px;
-  font: 700 clamp(40px, 8vw, 88px) / 0.95 var(--font-display);
-  letter-spacing: -0.02em;
-}
-
-.title span {
-  color: var(--cobalt);
-}
-
-.intro {
-  max-width: 60ch;
-  margin: 0;
+  font: 400 12px var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--muted);
 }
 
-.mail {
-  display: flex;
+.eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.title {
+  max-width: 16ch;
+  margin: 0;
+  font: 300 clamp(44px, 8vw, 104px) / 0.98 var(--font-sans);
+  letter-spacing: -0.055em;
+}
+
+.intro {
+  max-width: 56ch;
+  margin: 32px 0 0;
+  font-size: 17px;
+  color: var(--fg-soft);
+}
+
+.mailRow {
+  display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 6px;
+  margin-top: 36px;
+  padding: 6px 6px 6px 20px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.03);
+  max-width: 100%;
 }
 
 .address {
-  font: 500 clamp(16px, 2.6vw, 22px) var(--font-mono);
-  color: var(--amber);
+  min-width: 0;
+  font: 400 clamp(15px, 2.2vw, 19px) var(--font-mono);
+  color: var(--fg);
   text-decoration: none;
-  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .address:hover {
-  text-decoration: underline;
+  color: #fff;
 }
 
 .copy {
-  padding: 8px 14px;
-  border: 1px solid var(--line);
+  height: 36px;
+  padding: 0 16px;
+  border: 0;
   border-radius: 999px;
-  background: transparent;
-  color: var(--fg);
-  font: 500 13px var(--font-mono);
+  background: var(--fg);
+  color: var(--bg);
+  font: 500 13px var(--font-sans);
   cursor: pointer;
-}
-
-.copy:hover {
-  border-color: var(--cobalt);
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   margin: 28px 0 0;
   padding: 0;
   list-style: none;

@@ -9,7 +9,7 @@ describe("App", () => {
     render(<App />);
     const h1s = screen.getAllByRole("heading", { level: 1 });
     expect(h1s).toHaveLength(1);
-    expect(h1s[0]).toHaveTextContent(`${profile.name.first}${profile.name.last}`);
+    expect(h1s[0]).toHaveTextContent(`${profile.name.first} ${profile.name.last}`);
   });
 
   it("has a landmark section for every nav link", () => {
@@ -55,6 +55,6 @@ describe("App", () => {
     Object.defineProperty(navigator, "clipboard", { value: undefined, configurable: true });
     render(<App />);
     await userEvent.click(screen.getByRole("button", { name: "Copy email" }));
-    expect(await screen.findByRole("button", { name: /to copy/ })).toBeInTheDocument();
+    expect(await screen.findByRole("button", { name: /Press/ })).toBeInTheDocument();
   });
 });

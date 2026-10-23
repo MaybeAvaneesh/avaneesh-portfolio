@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0c0e1c"/>
+  <rect width="64" height="64" rx="14" fill="#07080b"/>
   <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle"
         font-family="Avenir Next, Segoe UI, sans-serif" font-weight="800" font-size="30"
-        fill="#e9ebf7">A<tspan fill="#6c8cff">G</tspan></text>
+        fill="#ededf0">A<tspan fill="#8c9bff">G</tspan></text>
 </svg>

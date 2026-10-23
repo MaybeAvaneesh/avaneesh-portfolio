@@ -11,7 +11,7 @@ export function Footer() {
         <span>
           © {YEAR} {profile.name.full}
         </span>
-        <span>built with React, coffee &amp; a diff engine</span>
+        <span>React · GSAP · Motion</span>
       </div>
     </footer>
   );

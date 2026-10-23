@@ -1,27 +1,30 @@
-/* Design tokens. A single, deliberately dark look. */
+/* Design tokens: refined dark. One cool accent, hairline structure, light display type. */
 :root {
-  --ink: #0c0e1c;
-  --ink-2: #141830;
-  --line: #262b4a;
-  --fg: #e9ebf7;
-  --fg-soft: #c9cde4;
-  --muted: #9097b8;
-  --cobalt: #6c8cff;
-  --amber: #ffc24d;
-  --ok: #4ade80;
-  --ok-fg: #7ef0a8;
-  --bad: #f87171;
-  --bad-fg: #fca5a5;
+  --bg: #07080b;
+  --surface: #0d0f14;
+  --surface-2: #12151c;
+  --line: rgb(255 255 255 / 0.07);
+  --line-strong: rgb(255 255 255 / 0.13);
+  --fg: #ededf0;
+  --fg-soft: #b4b8c2;
+  --muted: #7d828e;
+  --accent: #8c9bff;
+  --accent-soft: rgb(140 155 255 / 0.14);
+  --live: #5eead4;
+  --add: #6ee7b7;
+  --drop: #fca5a5;
+  --warn: #fcd34d;
 
-  --font-display: "Syne", "Avenir Next", "Segoe UI", sans-serif;
-  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: "Geist Variable", "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono Variable", "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --max-width: 1080px;
-  --gutter: 16px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --max-width: 1120px;
+  --gutter: 20px;
+  --nav-h: 64px;
   --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
 
   color-scheme: dark;
 }
